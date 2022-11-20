@@ -4,14 +4,16 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/umbe77/aoc-2019/day2"
+	ic "github.com/umbe77/aoc-2019/intcode"
 )
 
 func TestRunIntCode(t *testing.T) {
 
-	intCode := day2.ConvertIntCode("1,1,1,4,99,5,6,0,99")
+	intCode := ic.CompileIntCode("1,1,1,4,99,5,6,0,99")
 	fmt.Printf("%v\n", intCode)
-	if result := day2.RunIntCode(intCode); result != 30 {
-		t.Errorf("Expect 30 got %d", result)
+	inputs := make([]int, 0)
+	ic.RunIntCode(intCode, inputs)
+	if intCode[0] != 30 {
+		t.Errorf("Expect 30 got %d", intCode[0])
 	}
 }
