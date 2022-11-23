@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/umbe77/aoc-2019/day1"
+	"github.com/umbe77/aoc-2019/day10"
 	"github.com/umbe77/aoc-2019/day2"
 	"github.com/umbe77/aoc-2019/day3"
 	"github.com/umbe77/aoc-2019/day4"
@@ -48,6 +49,9 @@ func main() {
 		break
 	case "09":
 		day9.Execute()
+		break
+	case "10":
+		day10.Execute()
 		break
 	}
 }
